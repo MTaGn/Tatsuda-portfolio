@@ -1,0 +1,139 @@
+@use "./variables" as var;
+
+.about-container {
+    margin-bottom: var.$sec-under-margin;
+    @media screen and (max-width: 767px) {
+        margin-bottom: var.$sec-under-margin-sp;
+    }
+
+    .about-container__img-text-box {
+        display: flex;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1000px;
+        @media screen and (min-width: 767px) and (max-width: 1000px) {
+            max-width: 747px;
+        }
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            max-width: var.$content-width-sp;
+        }
+
+       .about-container__img {
+            max-width: var.$content-width-sp;
+            width: 100%;
+            height: auto;
+            margin-right: 32px;
+            @media screen and (min-width: 767px) and (max-width: 1000px) {
+                margin-right: 0;
+                margin: auto 32px auto 0;
+                aspect-ratio: 3/4;
+            }
+            @media screen and (max-width: 767px) {
+                margin-right: 0;
+            }
+       }
+       .about-container__text-box {
+           background-color: #EBF7FA;
+           padding: 32px;
+           @media screen and (max-width: 767px) {
+               padding: 24px;
+           }
+
+           .paragraph {
+               line-height: 2;
+           }
+           .paragraph:nth-child(1) {
+               margin-bottom: 48px;
+               @media screen and (max-width: 767px) {
+                    margin-bottom: 32px;
+               }
+           }
+           .about-container__slils-subheading {
+               margin-bottom: var.$body-text-ja;
+               @media screen and (max-width: 767px) {
+                   margin-bottom: var.$body-text-ja-sp;
+               }
+           }
+           .skils {
+               margin-bottom: 48px;
+               @media screen and (max-width: 767px) {
+                   margin-bottom: 32px;
+               }
+               .skil {
+                   margin-bottom: var.$body-text-ja;
+                   @media screen and (max-width: 767px) {
+                       margin-bottom: var.$body-text-ja-sp;
+                   }
+               }
+           }
+           .about-container__more-box {
+                width: 150px;
+                height: 50px;
+                margin-left: auto;
+                border: solid 1px #000000;
+                padding: 5px  20px;
+                transition: .5s;
+                position: relative;
+                z-index: 600;
+    
+            .about-container__more-text {
+                text-align: end;
+                padding-right: 20px;
+                position: absolute; 
+                z-index: 700; 
+            }
+            .about-container__arrow {
+                text-align: end;
+                position: absolute;
+                top: 40%;
+                right: 15%;
+                z-index: 800;
+
+                .arrow {
+                    display: inline-block;
+                    width: 100px;
+                    height: 10px;
+                    border-bottom: solid 1px #000000;
+                    border-right: solid 1px #000000;
+                    transform: skewX(45deg);
+                }
+            }
+        }
+        // 矢印のアニメーション改善必要
+        .about-container__more-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 400;
+            background-color: #60939D;
+            border: none;
+            width: 0;
+            transition: .5s;
+        }
+        .about-container__more-box:hover::before {
+            width: 100%;
+            height: 100%;
+
+        }
+        .about-container__more-box:hover {
+            border: none;
+    
+            .about-container__more-text {
+                color: #ffffff;
+            }
+            .about-container__arrow {
+                .arrow { 
+                    display: inline-block;
+                    width: 100px;
+                    height: 10px;
+                    border-bottom: solid 1px #ffffff;
+                    border-right: solid 1px #ffffff;
+                    transform: skewX(45deg);
+                }
+            }
+        }
+       }
+    }
+}

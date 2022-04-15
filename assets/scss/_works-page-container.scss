@@ -1,0 +1,151 @@
+@use "variables" as var;
+
+.works-page-container {
+    padding-top: var.$header-height;
+    @media screen and (max-width: 767px) {
+        padding-top: var.$header-height;
+    }
+
+    .works-page-container__menu-products-box {
+        display: flex;
+        max-width: var.$content-inner-width;
+        margin: 0 auto;
+        @media screen and (min-width: 767px) and (max-width: 1000px) {
+            max-width: 747px;
+        }
+        @media screen and (max-width: 767px) {
+            max-width: var.$content-width-sp;
+            flex-direction: column;
+        }
+        
+        .works-page-container__product-menus {
+            position: fixed;
+            margin: 0 auto;
+            padding: 0 32px 0 0;
+            width: 30%;
+            @media screen and (max-width: 767px) {
+                width: 100%;
+                position: static;
+                padding: 0;
+                margin-bottom: 48px;
+            }
+    
+            .menu {
+                text-align: left;
+                cursor: pointer;
+                padding: 12px 16px;
+                position: relative;
+                transition: .5s;
+    
+                .menu-anker {
+                    color: var.$text-color;
+                    display: inline-block;
+                    width: 100%;
+
+                    .en {
+                        padding: 0 0 0 8px;
+                    }
+                }
+                .menu-anker::before {
+                    content: "";
+                    display: inline-block;
+                    background-color: var.$text-color;
+                    vertical-align: middle;
+                    width: 8px;
+                    height: 1px;
+                }
+            }
+            .menu:hover {
+                opacity: .5;
+            }
+        }
+
+        .works-page-container__products-box {
+            margin: 0 0 0 auto;
+            width: 70%;
+            @media screen and (min-width: 767px) and (max-width: 1000px) {
+                max-width: 747px;
+            }
+            @media screen and (max-width: 767px) {
+                max-width: var.$content-width-sp;
+                width: 100%;
+            }
+            .third-heading-box {
+                margin: 160px 0 0;
+
+                .third-heading {
+                    font-size: var.$heading-third;
+                    border-bottom: 5px solid #60939D;
+                    padding-bottom: 8px;
+                    display: inline-block;
+                }
+            }
+            .third-heading-box:first-child {
+                margin: 0;
+            }
+            .works-page-container__product-descs-box {
+                // background-color: #EBF7FA;
+                
+                padding: 32px;
+                margin: 48px 0 24px;
+        
+                .works-page-container__product-desc-box {
+                    display: flex;
+                    margin-bottom: 24px;
+        
+                    .works-page-container__item {
+                        width: 20%;
+                        @media screen and (max-width: 767px) {
+                            width: 30%;
+                        }
+                    }
+                    .works-page-container__detail {
+                        width: 80%;
+                        line-height: 2;
+                        margin-top: -8px;
+                        @media screen and (max-width: 767px) {
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+            .works-page-container__product-img-box {
+                .works-page-container__subheading {
+                    text-align: center;
+                    margin-top: 24px;
+                }
+                .works-container__product-img {
+                    width: 100%;
+                    border: 1px solid #000000;
+                }
+                .works-page-container__product-thumbnails {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 8px 0 0 0;
+                    @media screen and (max-width: 767px) {
+                        flex-wrap: wrap;
+                    }
+
+                    .works-page-container__product-thumbnail {
+                        width: 24%;
+                        padding: 16px;
+                        border: 1px solid #000000;
+                        opacity: .3;
+                        cursor: pointer;
+                        @media screen and (max-width: 767px) {
+                            width: 49%;
+                            padding: 8px;
+                        }
+
+                        .thumbnail {
+                            width: 100%;
+                        }
+                    }
+                    .selected {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

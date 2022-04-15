@@ -1,0 +1,144 @@
+@use "./variables" as var;
+
+.about-page-container {
+    padding-top: var.$header-height;
+
+    @media screen and (max-width: 767px) {
+        padding-top: var.$header-height;
+    }
+
+    .about-page-container__text-img-box {
+        display: flex;
+        margin: 0 auto 48px;
+        max-width: var.$content-inner-width;
+        @media screen and (min-width: 767px) and (max-width: 1000px) {
+            max-width: 747px;
+        }
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            max-width: var.$content-width-sp;
+        }
+
+        .about-page-container__text-box {
+            background-color: #EBF7FA;
+            padding: 32px;
+            margin-left: 32px;
+            @media screen and (max-width: 767px) {
+                margin-left: 0;
+            }
+
+            .about-page-container__text {
+                margin-bottom: var.$body-text-ja;
+                line-height: 2;
+                @media screen and (max-width: 767px) {
+                    margin-bottom: var.$body-text-ja-sp;
+                }
+            }
+            .about-page-container__slils-subheading {
+                margin-bottom: var.$body-text-ja;
+                @media screen and (max-width: 767px) {
+                    margin-bottom: var.$body-text-ja-sp;
+                }
+            }
+            .about-page-container__skils {
+                .skil {
+                    margin-bottom: var.$body-text-ja;
+                    @media screen and (max-width: 767px) {
+                        margin-bottom: var.$body-text-ja-sp;
+                    }
+                }
+            }
+        }
+        .about-page-container__profile-img {
+            width: 50%;
+            height: auto;
+            @media screen and (min-width: 767px) and (max-width: 1000px) {
+                width: 50%;
+                aspect-ratio: 3/4;
+            }
+            @media screen and (max-width: 767px) {
+                width: 100%;
+                height: auto; 
+            }
+        }
+    }
+
+    .about-page-container__career-box {
+        margin-bottom: var.$sec-under-margin;
+        max-width: var.$content-inner-width;        ;
+        margin: 0 auto;
+        @media screen and (min-width: 767px) and (max-width: 1000px) {
+            max-width: 747px;
+        }
+        @media screen and (max-width: 767px) {
+            max-width: var.$content-width-sp;
+            height: auto; 
+        }
+
+        .about-page-container__third-heading-box {
+            display: flex;
+            align-items: flex-start;
+            max-width: 1000px;
+            margin: 0 auto 48px;
+            @media screen and (max-width: 767px) {
+                max-width: var.$content-width-sp;
+            }
+            
+            .section-container__third-heading-text-box {
+                display: flex;
+
+                .third-heading {
+                    font-size: var.$heading-third;
+                    border-bottom: 5px solid #60939D;
+                    padding-bottom: 8px;
+                    margin-right: 16px;
+                }
+                .third-heading-ja {
+                    font-size: 22px;
+                    display: block;
+                    .hyphen {
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+        .about-page-container__career-blocks {
+            .about-page-container__career-block {
+                display: flex;
+                align-items: flex-start;
+                padding: 0 0 24px 0;
+                // line-height: 2;
+                @media screen and (max-width: 767px) {
+                    // padding: 0 0 8px 0;
+                }
+
+                .about-page-container__year {
+                    padding-right: 24px;
+                    width: 15%;
+                    @media screen and (max-width: 767px) {
+                        padding-right: 16px;
+                        width: 21%;
+                    }
+                }
+
+                .about-page-container__line {
+                    margin-right: 24px;
+                    width: 5px;
+                    height: 24px;
+                    background-color: #60939D;
+                    @media screen and (max-width: 767px) {
+                        margin-right: 16px;
+                    }
+                }
+                .about-page-container__detail {
+                    width: 69%;
+                    @media screen and (max-width: 767px) {
+                        margin-top: -7px;
+                        margin-bottom: -7px;
+                        line-height: 2;
+                    }
+                }
+            }
+        }
+    }
+}

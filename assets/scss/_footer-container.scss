@@ -1,0 +1,21 @@
+@use "variables" as var;
+
+.footer-container {
+    width: 100%;
+    max-width: 1280px;
+    height: 136px;
+    line-height: 136px;
+    background-color: #EBF7FA;
+    margin: 0 auto;
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        max-width: 767px;
+        height: 80px;
+        line-height: 80px;
+    }
+
+    .copyright {
+        text-align: center;
+        color: #333333;
+    }
+}

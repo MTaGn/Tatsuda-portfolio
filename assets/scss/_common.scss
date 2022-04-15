@@ -1,0 +1,103 @@
+@use "variables" as var;
+
+*,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var.$header-height;
+    box-sizing: border-box;
+    font-size: var.$body-text-ja;
+    @media screen and (max-width: 767px) {
+        scroll-padding-top: var.$header-height-sp;
+    }
+
+    .body {
+        font-family: var.$font-family;
+    }
+}
+
+.en {
+    font-size: 1.125rem;
+}
+
+.anker:hover {
+  border-bottom: solid 1px #000000;
+}
+
+/*********************
+subheading / 装飾
+*********************/
+.section-container {
+    margin-bottom: var.$sec-under-margin;
+
+    .section-container__subheading-box {
+        display: flex;
+        align-items: flex-start;
+        max-width: 1000px;
+        margin: 0 auto var.$heading-under-margin;
+    
+        .subheading-decoration {
+            @include var.subheading-decoration($mode: "pc");
+        }
+        .section-container__subheading-text-box {
+            .subheading {
+                font-size: var.$subheading;
+                margin-bottom: 16px;
+            }
+            .subheading-ja {
+                font-size: 24px;
+                display: block;
+            }    
+        }
+    }
+    .section-container__subheading-box-sp {
+        display: none;
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 1000px) {
+    .section-container {
+        .section-container__subheading-box {
+            // display: flex;
+            // align-items: flex-start;
+            max-width: 747px;
+            // margin: 0 auto var.$heading-under-margin;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .section-container {
+        margin-bottom: var.$sec-under-margin-sp;
+
+        .section-container__subheading-box {
+            display: none;
+        }
+        .section-container__subheading-box-sp {
+            display: flex;
+            margin: 0 auto var.$heading-under-margin-sp;
+            max-width: var.$content-width-sp;
+
+            .subheading-decoration {
+                @include var.subheading-decoration($mode: "sp");
+            }
+            .section-container__subheading-text-box {
+                display: flex;
+                font-size: var.$subheading-sp;
+                margin-bottom: 0;
+
+                .subheading {
+                    margin-right: 16px;
+                }
+                .hyphen-left {
+                    margin-right: 8px;
+                }
+                .hyphen-right {
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}
+

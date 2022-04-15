@@ -1,0 +1,87 @@
+/**************
+  共通
+***************/ 
+$base-color: #ffffff;
+$main-color: #ebf7fa;
+$accent-color: #60939d;
+$text-color: #333333;
+$font-family: "Arial", "Helvetica Neue", "游ゴシック", "Hiragino Sans", sans-serif;
+$line-height-ja: 1.9;
+$line-height-en: 1.7;
+
+/**************
+  PC
+***************/ 
+$mainvisuak-title: 70px;
+$title: 40px; // h1
+$subheading: 31px; // h2
+$heading-third: 24px; // h3
+$body-text-ja: 16px;
+$body-text-en: 18px;
+$annotation: 14px;
+$font-weight: 400;
+$line-spacing: 50%;
+$character-spacing: 5em;
+$both-sides-margin: 136px;
+$sec-under-margin: 136px;
+$heading-under-margin: 80px;
+$subheading-under-margin: 24px;
+$menu-text-margin: 48px;
+$sec-margin: 136px;
+$frame-text-margin: 32px;
+$sec-text-margin: 32px; // セクション内テキスト間余白
+$sec-img-margin: 64px; // セクション内画像間余白
+$contents-sides-margin: 136px; // セクション内画像間余白
+$header-sides-margin: 32px;
+$more-text-margin: 48px; // view moreとその上のテキスト間余白
+$subheading-content-margin: 80px; // 小見出し(h2)とコンテンツ間余白
+$header-height: 100px;
+$content-width: 1280px;
+$content-inner-width: 1000px;
+
+/**************
+  SP
+***************/ 
+$mainvisuak-title-sp: 42px;
+$title-sp: 24px; // h1
+$subheading-sp: 22px; // h2
+$heading-third-sp: 24px; // h3
+$body-text-ja-sp: 14px;
+$body-text-en-sp: 16px;
+$annotation-sp: 14px;
+$font-weight: 400;
+$line-spacing-sp: 50%;
+$character-spacing-sp: 5%;
+$both-sides-margin-sp: 16px;
+$sec-under-margin-sp: 80px;
+$heading-under-margin-sp: 48px;
+$subheading-under-margin-sp: 24px;
+$menu-text-margin-sp: 48px;
+$sec-margin-sp: 80px;
+$frame-text-margin-sp: 32px;
+$sec-text-margin-sp: 32px; // セクション内テキスト間余白
+$sec-img-margin-sp: 32px; // セクション内画像間余白
+$contents-sides-margin-sp: 136px; // セクション内画像間余白
+$header-sides-margin-sp: 16px;
+$more-text-margin-sp: 48px; // view moreとその上のテキスト間余白
+$subheading-content-margin-sp: 48px; // 小見出し(h2)とコンテンツ間余白
+$header-height-sp: 70px;
+$content-width-sp: 340px;
+
+/**************
+  mixin
+***************/ 
+@mixin subheading-decoration($mode) {
+    background-color: #60939d;
+    @if($mode == "pc") {
+        width: 15px;
+        height: 100px;
+        margin-right: $subheading-under-margin;
+    }
+    @else if($mode == "sp") {
+        width: 10px;
+        height: 22px;
+        background-color: #60939d;
+        margin-right: $subheading-under-margin-sp;
+    }
+}

@@ -1,0 +1,21 @@
+.page-not-found-container {
+    padding-top: 100px;
+    height: 70vh;
+
+    .page-not-found-container__text {
+        margin-bottom: 48px;
+        text-align: center;
+        line-height: 2;
+    }
+    .under-line {
+        border-bottom: 1px solid #000000;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .page-not-found-container {
+      padding-top: 70px;
+      padding: 0 16px;
+      height: 100vh;
+    }
+  }

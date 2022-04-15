@@ -1,0 +1,16 @@
+@use "./variables" as var;
+@use "./common" as common;
+@use "./header" as header;
+@use "./mainvisual-container" as mainv;
+@use "./about-container" as about;
+@use "./works-container" as work;
+@use "./contact-container" as contact;
+@use "./footer-container" as footer;
+@use "./about-page-container" as about-page;
+@use "./works-page-container" as works-page;
+@use "./contact-page-container" as contact-page;
+@use "./page-not-found-container" as page-not-found;
+
+html {
+  letter-spacing: var.$character-spacing;
+}
