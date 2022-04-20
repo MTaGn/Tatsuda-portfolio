@@ -1,0 +1,12 @@
+@use "variables" as var;
+
+.send-thanks-container {
+    padding-top: var.$header-height;
+    @media screen and (max-width: 767px) {
+        padding-top: var.$header-height;
+    }    
+
+    .send-thanks-container__text {
+        text-align: center;
+    }
+}

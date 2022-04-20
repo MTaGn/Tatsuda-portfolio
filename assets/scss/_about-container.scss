@@ -1,27 +1,25 @@
 @use "./variables" as var;
 
 .about-container {
-    margin-bottom: var.$sec-under-margin;
+    margin: 0 auto var.$sec-under-margin;
+    width: 96%;
+    max-width: 1000px;
     @media screen and (max-width: 767px) {
-        margin-bottom: var.$sec-under-margin-sp;
+        margin: 0 auto var.$sec-under-margin-sp;
+        max-width: var.$content-width-sp;
+    }
+    @media screen and (min-width: 767px) and (max-width: 1000px) {
+        max-width: 747px;
     }
 
     .about-container__img-text-box {
-        display: flex;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 1000px;
-        @media screen and (min-width: 767px) and (max-width: 1000px) {
-            max-width: 747px;
-        }
+        display: flex;   
         @media screen and (max-width: 767px) {
             flex-direction: column;
-            max-width: var.$content-width-sp;
         }
 
        .about-container__img {
-            max-width: var.$content-width-sp;
-            width: 100%;
+            width: 40%; 
             height: auto;
             margin-right: 32px;
             @media screen and (min-width: 767px) and (max-width: 1000px) {
@@ -30,6 +28,7 @@
                 aspect-ratio: 3/4;
             }
             @media screen and (max-width: 767px) {
+                width: 100%;
                 margin-right: 0;
             }
        }

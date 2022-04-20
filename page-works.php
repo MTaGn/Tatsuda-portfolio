@@ -33,7 +33,7 @@
                             <li class="funiture-site menu"><a href="#funiture-site-area" class="menu-anker"><span class="en">Funiture Shop</span></a></li>
                             <li class="english-lp-design menu"><a href="#english-LP-area" class="menu-anker"><span class="en">English School Design</span></a></li>
                             <li class="sports-gym-lp-design menu"><a href="#gym-LP-area" class="menu-anker"><span class="en">Sport Gym Design</span></a></li>
-                            <li class="todo-app menu"><a href="#" class="menu-anker"><span class="en">Todo App</span></a></li>
+                            <li class="todo-app menu"><a href="#todo-app-area" class="menu-anker"><span class="en">Todo App</span></a></li>
                         </ul>
 
                         <div class="works-page-container__products-box">
@@ -256,6 +256,9 @@
                             </div>
 
                             <!-- Todoアプリ -->
+                            <div id="todo-app-area" class="third-heading-box">
+                                <h2 class="third-heading">Todo App</h2>
+                            </div>
                             <div id="" class="works-page-container__product-descs-box">
                                 <div class="works-page-container__product-desc-box">
                                     <p class="works-page-container__item">概要</p>
@@ -263,7 +266,7 @@
                                 </div>
                                 <div class="works-page-container__product-desc-box">
                                     <p class="works-page-container__item">制作目的</p>
-                                    <p class="works-page-container__detail"><span class="en">Reacrt.js</span>学習のため
+                                    <p class="works-page-container__detail"><span class="en">React.js</span>学習のため
                                     </p>
                                 </div>
                                 <div class="works-page-container__product-desc-box">

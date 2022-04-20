@@ -5,9 +5,9 @@
     padding-top: var.$header-height;
     height: 100vh;
     margin: 0 auto var.$sec-under-margin;
+    width: 100%;
 
     .mainvisual-container__img {
-        max-width: var.$content-width;
         width: 100%;
         height: auto;
     }
@@ -34,6 +34,12 @@
                 font-size: var.$subheading*1.125;
             }
         }
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1000px) {
+    .mainvisual-container {
+        height: 450px;
     }
 }
 

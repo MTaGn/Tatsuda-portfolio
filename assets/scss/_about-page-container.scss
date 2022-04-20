@@ -1,22 +1,30 @@
 @use "./variables" as var;
 
 .about-page-container {
+    width: 96%;
+    max-width: var.$content-inner-width;
+    margin: 0 auto var.$sec-under-margin;
     padding-top: var.$header-height;
-
     @media screen and (max-width: 767px) {
+        margin: 0 auto var.$sec-under-margin-sp;
         padding-top: var.$header-height;
+        max-width: var.$content-width-sp;
+    }
+    @media screen and (min-width: 767px) and (max-width: 1000px) {
+        max-width: 747px;
     }
 
     .about-page-container__text-img-box {
         display: flex;
-        margin: 0 auto 48px;
+        // margin: 0 auto 48px;
+        margin-bottom: 48px;
         max-width: var.$content-inner-width;
-        @media screen and (min-width: 767px) and (max-width: 1000px) {
-            max-width: 747px;
-        }
+        // @media screen and (min-width: 767px) and (max-width: 1000px) {
+        //     max-width: 747px;
+        // }
         @media screen and (max-width: 767px) {
             flex-direction: column;
-            max-width: var.$content-width-sp;
+            // max-width: var.$content-width-sp;
         }
 
         .about-page-container__text-box {
@@ -50,10 +58,11 @@
             }
         }
         .about-page-container__profile-img {
-            width: 50%;
+            width: 40%;
             height: auto;
+            margin: auto 0;
             @media screen and (min-width: 767px) and (max-width: 1000px) {
-                width: 50%;
+                width: 40%;
                 aspect-ratio: 3/4;
             }
             @media screen and (max-width: 767px) {
@@ -107,17 +116,13 @@
                 display: flex;
                 align-items: flex-start;
                 padding: 0 0 24px 0;
-                // line-height: 2;
-                @media screen and (max-width: 767px) {
-                    // padding: 0 0 8px 0;
-                }
 
                 .about-page-container__year {
                     padding-right: 24px;
                     width: 15%;
                     @media screen and (max-width: 767px) {
                         padding-right: 16px;
-                        width: 21%;
+                        width: 24%;
                     }
                 }
 
@@ -136,6 +141,7 @@
                         margin-top: -7px;
                         margin-bottom: -7px;
                         line-height: 2;
+                        width: 76%;
                     }
                 }
             }

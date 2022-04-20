@@ -1,9 +1,15 @@
 @use "variables" as var;
 
 .works-container {
-    margin-bottom: var.$sec-under-margin;
+    width: 96%;
+    margin: 0 auto var.$sec-under-margin;
+    max-width: 1000px;
     @media screen and (max-width: 767px) {
-        margin-bottom: var.$sec-under-margin-sp;
+        margin: 0 auto var.$sec-under-margin-sp;
+        max-width: var.$content-width-sp;
+    }
+    @media screen and (min-width: 767px) and (max-width: 1000px) {
+        max-width: 747px;
     }
 
     .works-container__works-boxes {
@@ -11,16 +17,11 @@
         // 768pxまでは2カラム表示するように想定
         grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
         gap: 48px;
-        margin: 0 auto 48px;
-        max-width: 1000px;
+        margin: 0 0 48px;
         width: 100%;
-        @media screen and (min-width: 767px) and (max-width: 1000px) {
-            max-width: 747px;
-        }
         @media screen and (max-width: 767px) {
-            grid-template-columns: repeat(auto-fit, minmax(343px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 24px;
-            max-width: var.$content-width-sp;
         }
 
         .works-container__work-box {

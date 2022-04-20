@@ -60,10 +60,7 @@ subheading / 装飾
 @media screen and (min-width: 767px) and (max-width: 1000px) {
     .section-container {
         .section-container__subheading-box {
-            // display: flex;
-            // align-items: flex-start;
             max-width: 747px;
-            // margin: 0 auto var.$heading-under-margin;
         }
     }
 }
@@ -76,7 +73,7 @@ subheading / 装飾
         }
         .section-container__subheading-box-sp {
             display: flex;
-            margin: 0 auto var.$heading-under-margin-sp;
+            margin-bottom: var.$heading-under-margin-sp;
             max-width: var.$content-width-sp;
 
             .subheading-decoration {

@@ -57,7 +57,7 @@
 
         .header-container {
             height: var.$header-height-sp;
-            line-height: var.$header-height-sp; // ないとなぜかレイアウト崩れる
+            line-height: var.$header-height-sp; // レイアウト崩れるため
             padding: 0 var.$header-sides-margin-sp;
     
             .header-container__title {

@@ -46,22 +46,22 @@
                         </div>
                         <ul class="about-page-container__career-blocks">
                             <li class="about-page-container__career-block">
-                                <div class="about-page-container__year"><span class="en"></span>1992/8</div>
+                                <div class="about-page-container__year"><span class="en">1992/8</span></div>
                                 <div class="about-page-container__line"></div>
                                 <div class="about-page-container__detail">鹿児島に生まれる</div>
                             </li>
                             <li class="about-page-container__career-block">
-                                <div class="about-page-container__year"><span class="en"></span>2017/3</div>
+                                <div class="about-page-container__year"><span class="en">2017/3</span></div>
                                 <div class="about-page-container__line"></div>
                                 <div class="about-page-container__detail">大学院修士課程修了</div>
                             </li>
                             <li class="about-page-container__career-block">
-                                <div class="about-page-container__year"><span class="en"></span>2017/4</div>
+                                <div class="about-page-container__year"><span class="en">2017/4</span></div>
                                 <div class="about-page-container__line"></div>
                                 <div class="about-page-container__detail">メーカーにて<span class="en">2</span>年間製造技術職に従事</div>
                             </li>
                             <li class="about-page-container__career-block">
-                                <div class="about-page-container__year"><span class="en"></span>2019/4</div>
+                                <div class="about-page-container__year"><span class="en">2019/4</span></div>
                                 <div class="about-page-container__line"></div>
                                 <div class="about-page-container__detail">未経験から<span class="en">Web</span>業界に入り、約<span class="en">2</span>年間、<span class="en">Web</span>アプリ開発に従事</div>
                             </li>

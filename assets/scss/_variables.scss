@@ -21,22 +21,18 @@ $body-text-en: 18px;
 $annotation: 14px;
 $font-weight: 400;
 $line-spacing: 50%;
-$character-spacing: 5em;
+$character-spacing: .05em;
 $both-sides-margin: 136px;
 $sec-under-margin: 136px;
 $heading-under-margin: 80px;
 $subheading-under-margin: 24px;
 $menu-text-margin: 48px;
 $sec-margin: 136px;
-$frame-text-margin: 32px;
-$sec-text-margin: 32px; // セクション内テキスト間余白
-$sec-img-margin: 64px; // セクション内画像間余白
 $contents-sides-margin: 136px; // セクション内画像間余白
 $header-sides-margin: 32px;
 $more-text-margin: 48px; // view moreとその上のテキスト間余白
 $subheading-content-margin: 80px; // 小見出し(h2)とコンテンツ間余白
 $header-height: 100px;
-$content-width: 1280px;
 $content-inner-width: 1000px;
 
 /**************
@@ -58,15 +54,12 @@ $heading-under-margin-sp: 48px;
 $subheading-under-margin-sp: 24px;
 $menu-text-margin-sp: 48px;
 $sec-margin-sp: 80px;
-$frame-text-margin-sp: 32px;
-$sec-text-margin-sp: 32px; // セクション内テキスト間余白
-$sec-img-margin-sp: 32px; // セクション内画像間余白
 $contents-sides-margin-sp: 136px; // セクション内画像間余白
 $header-sides-margin-sp: 16px;
 $more-text-margin-sp: 48px; // view moreとその上のテキスト間余白
 $subheading-content-margin-sp: 48px; // 小見出し(h2)とコンテンツ間余白
 $header-height-sp: 70px;
-$content-width-sp: 340px;
+$content-width-sp: 300px;
 
 /**************
   mixin
