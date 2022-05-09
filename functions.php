@@ -8,11 +8,6 @@ function my_enqueue_styles() {
 }
 add_action("wp_enqueue_scripts", "my_enqueue_styles");
 
-// function custom_enqueue() {
-//     wp_enqueue_style("style", get_themplate_directory_uri()."/style.css");
-// }
-// add_action("wp_enqueue_scripts", "custom_enqueue");
-
 /**************************************************
 JSファイルの読み込み
 **************************************************/
@@ -71,4 +66,3 @@ add_shortcode("work-img-path", "my_shortcode");
 /**************************************************
  グローバルナビゲーションを管理画面で作成可能にする
 **************************************************/
-// add_theme_support("menus");
