@@ -26,15 +26,21 @@
                     </div>
                    
                     <div class="works-page-container__menu-products-box">
-                         <!-- メニュー -->
-                        <ul class="works-page-container__product-menus">
-                            <li class="sneakers-site menu"><a href="#sneakers-area" class="menu-anker"><span class="en">Sneaker Shop</span></a></li>
-                            <li class="english-site menu"><a href="#english-school-area" class="menu-anker"><span class="en">English School</span></a></li>
-                            <li class="funiture-site menu"><a href="#funiture-site-area" class="menu-anker"><span class="en">Funiture Shop</span></a></li>
-                            <li class="english-lp-design menu"><a href="#english-LP-area" class="menu-anker"><span class="en">English School Design</span></a></li>
-                            <li class="sports-gym-lp-design menu"><a href="#gym-LP-area" class="menu-anker"><span class="en">Sport Gym Design</span></a></li>
-                            <li class="todo-app menu"><a href="#todo-app-area" class="menu-anker"><span class="en">Todo App</span></a></li>
-                        </ul>
+                        <!-- メニュー -->
+                        <div class="works-page-container__menus-and-toggle-btn">
+                            <div class="works-page-container__menus-toggle-btn">
+                                <input id="works-page-container__menus-checkbox-id" type="checkbox" class="works-page-container__menus-checkbox" checked>
+                                <label for="works-page-container__menus-checkbox-id" class="works-page-container__menus-label"></label>
+                            </div>
+                            <ul class="works-page-container__product-menus">
+                                <li class="works-page-container__sneakers-site works-page-container__menu"><a href="#sneakers-area" class="works-page-container__menu-anker"><span class="en">Sneaker Shop</span></a></li>
+                                <li class="works-page-container__english-site works-page-container__menu"><a href="#english-school-area" class="works-page-container__menu-anker"><span class="en">English School</span></a></li>
+                                <li class="works-page-container__funiture-site works-page-container__menu"><a href="#funiture-site-area" class="works-page-container__menu-anker"><span class="en">Funiture Shop</span></a></li>
+                                <li class="works-page-container__english-lp-design works-page-container__menu"><a href="#english-LP-area" class="works-page-container__menu-anker"><span class="en">English School Design</span></a></li>
+                                <li class="works-page-container__sports-gym-lp-design works-page-container__menu"><a href="#gym-LP-area" class="works-page-container__menu-anker"><span class="en">Sport Gym Design</span></a></li>
+                                <li class="works-page-container__todo-app works-page-container__menu"><a href="#todo-app-area" class="works-page-container__menu-anker"><span class="en">Todo App</span></a></li>
+                            </ul>
+                        </div>
 
                         <div class="works-page-container__products-box">
 
@@ -65,7 +71,7 @@
                                 </div>
                                 <div class="works-page-container__product-desc-box">
                                     <p class="works-page-container__item"><span class="en">URL</span></p>
-                                    <p class="works-page-container__detail"><span class="en"><a href="https://mtagn.github.io/past_work_sneaker-shop/" target="blank">https://mtagn.github.io/past_work_sneaker-shop/</a></span></p>
+                                    <p class="works-page-container__detail"><span class="en"><a href="https://mtagn.github.io/past_work_sneaker-shop/" target="_blank">https://mtagn.github.io/past_work_sneaker-shop/</a></span></p>
                                 </div>
                             </div>  
 
@@ -105,7 +111,7 @@
                                 </div>
                                 <div class="works-page-container__product-desc-box">
                                     <p class="works-page-container__item"><span class="en">URL</span></p>
-                                    <p class="works-page-container__detail"><a href="https://mtagn.github.io/past_work_english-school/" target="blank"><span class="en">https://mtagn.github.io/past_work_english-school/</span></a></p>
+                                    <p class="works-page-container__detail"><a href="https://mtagn.github.io/past_work_english-school/" target="_blank"><span class="en">https://mtagn.github.io/past_work_english-school/</span></a></p>
                                 </div>
                             </div>  
 
@@ -146,7 +152,7 @@
                                 </div>
                                 <div class="works-page-container__product-desc-box">
                                     <p class="works-page-container__item"><span class="en">URL</span></p>
-                                    <p class="works-page-container__detail"><a href="https://mtagn.github.io/past_work_funiture-shop/" target="blank"><span class="en">https://mtagn.github.io/past_work_funiture-shop/</span></a></p>
+                                    <p class="works-page-container__detail"><a href="https://mtagn.github.io/past_work_funiture-shop/" target="_blank"><span class="en">https://mtagn.github.io/past_work_funiture-shop/</span></a></p>
                                 </div>
                             </div>  
 

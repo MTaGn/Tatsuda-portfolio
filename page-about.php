@@ -27,7 +27,7 @@
                     <div class="about-page-container__text-img-box">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/profile.jpg" alt="プロフィール写真" class="about-page-container__profile-img">
                         <div class="about-page-container__text-box">
-                            <p class="about-page-container__text">顧客の売上向上につながる仕事がしたいと思い<span class="en">Web</span>サイト、<span class="en">LP</span>作成等の<span class="en">Web</span>制作に関する技術を中心に学習しています。またこれまでに<span class="en">PG・SE</span>として約<span class="en">3</span>年間<span class="en">Web</span>アプリケーション開発等を経験しているため<span class="en">Web</span>制作だけでなく<span class="en">Web</span>アプリケーション開発まで幅広く対応することができます。</p>
+                            <p class="about-page-container__text">クライアントの課題解決につながる仕事がしたいと思い<span class="en">Web</span>サイト、<span class="en">LP</span>作成等の<span class="en">Web</span>制作に関する技術を中心に学習しています。またこれまでに<span class="en">PG・SE</span>として約<span class="en">3</span>年間<span class="en">Web</span>アプリケーション開発等を経験しているため<span class="en">Web</span>制作だけでなく<span class="en">Web</span>アプリケーション開発まで幅広く対応することができます。</p>
                             <p class="about-page-container__slils-subheading">スキル</p>
                             <ul class="about-page-container__skils">
                                 <li class="skil"><span class="en">HTML / CSS / JavaScript / React.js</span></li>

@@ -1,135 +1,316 @@
 <?php get_header(); ?>
 
-<main id="main" class="main">
-    <div class="main-container">
+    <?php if(have_posts()): ?>
+        <?php while(have_posts()): the_post();?>
 
-        <div class="mainvisual-container">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mainvisual.png" alt="メインビジュアル"  width="1280" height="405" class="mainvisual-container__img">
-            <div class="mainvisual-container__text-box">
-                <p class="mainvisual-container__main-text">Tatsuda</p>
-                <div class="mainvisual-container__underline"></div>
-                <p class="mainvisual-container__sub-text"><span class="en">Web</span>制作</p>
-            </div>
-        </div>
+            <main id="main">
+                <div class="main-container">
 
-        <div class="about-container section-container">
-            <div class="section-container__subheading-box">
-                <div class="subheading-decoration"></div>
-                <div class="section-container__subheading-text-box">
-                    <h2 class="subheading">About</h2>
-                    <div class="subheading-ja">私について</div>
-                </div>
-            </div>
-            <div class="section-container__subheading-box-sp">
-                <div class="subheading-decoration"></div>
-                <div class="section-container__subheading-text-box">
-                    <h2 class="subheading">About</h2>
-                    <div class="hyphen-left">&#045;</div>
-                    <div class="subheading-ja">私について</div>
-                    <div class="hyphen-right">&#045;</div>
-                </div>
-            </div>
+                  <div class="works-page-container section-container">
 
-            <div class="about-container__img-text-box">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/profile.jpg" alt="プロフィール写真" width="350" height="465" class="about-container__img">
-                <div class="about-container__text-box">
-                    <p class="about-container__main-text paragraph">顧客の売上向上につながる仕事がしたいと思い<span class="en">Web</span>サイト、<span class="en">LP</span>作成等の<span class="en">Web</span>制作に関する技術を中心に学習しています。またこれまでに<span class="en">PG・SE</span>として約<span class="en">3</span>年間<span class="en">Web</span>アプリケーション開発等を経験しているため<span class="en">Web</span>制作だけでなく<span class="en">Web</span>アプリケーション開発まで幅広く対応することができます。
-                    </p>
-                    <p class="about-container__slils-subheading">スキル</p>
-                    <ul class="skils">
-                        <li class="about-container__skils skil"><span class="en">HTML / CSS / JavaScript / React.js</span></li>
-                        <li class="about-container__skils skil"><span class="en">PHP / Laravel / MySQL /</span></li>
-                        <li class="about-container__skils skil"><span class="en">WordPress / Photoshop</span></li>
-                    </ul>
-                    <div class="about-container__more-box">
-                        <p class="about-container__more-text">
-                            <a href="<?php echo get_template_directory_uri(); ?>/about/" class="arrow-anker"><span class="en">View More</span></a>
-                        </p>
-                        <div class="about-container__arrow"><span class="arrow"></span></div>
+                    <div class="section-container__subheading-box">
+                        <div class="subheading-decoration"></div>
+                        <div class="section-container__subheading-text-box">
+                            <h1 class="subheading">Works</h1>
+                            <div class="subheading-ja">制作実績</div>
+                        </div>
+                    </div>
+                    <div class="section-container__subheading-box-sp">
+                        <div class="subheading-decoration"></div>
+                        <div class="section-container__subheading-text-box">
+                            <h2 class="subheading">Works</h2>
+                            <div class="hyphen-left">&#045;</div>
+                            <div class="subheading-ja">制作実績</div>
+                            <div class="hyphen-right">&#045;</div>
+                        </div>
+                    </div>
+                   
+                    <div class="works-page-container__menu-products-box">
+                        <!-- メニュー -->
+                        <div class="works-page-container__menus-and-toggle-btn">
+                            <div class="works-page-container__menus-toggle-btn">
+                                <input id="works-page-container__menus-checkbox-id" type="checkbox" class="works-page-container__menus-checkbox" checked>
+                                <label for="works-page-container__menus-checkbox-id" class="works-page-container__menus-label"></label>
+                            </div>
+                            <ul class="works-page-container__product-menus">
+                                <li class="works-page-container__sneakers-site works-page-container__menu"><a href="#sneakers-area" class="works-page-container__menu-anker"><span class="en">Sneaker Shop</span></a></li>
+                                <li class="works-page-container__english-site works-page-container__menu"><a href="#english-school-area" class="works-page-container__menu-anker"><span class="en">English School</span></a></li>
+                                <li class="works-page-container__funiture-site works-page-container__menu"><a href="#funiture-site-area" class="works-page-container__menu-anker"><span class="en">Funiture Shop</span></a></li>
+                                <li class="works-page-container__english-lp-design works-page-container__menu"><a href="#english-LP-area" class="works-page-container__menu-anker"><span class="en">English School Design</span></a></li>
+                                <li class="works-page-container__sports-gym-lp-design works-page-container__menu"><a href="#gym-LP-area" class="works-page-container__menu-anker"><span class="en">Sport Gym Design</span></a></li>
+                                <li class="works-page-container__todo-app works-page-container__menu"><a href="#todo-app-area" class="works-page-container__menu-anker"><span class="en">Todo App</span></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="works-page-container__products-box">
+
+                            <!-- スニーカー紹介Webサイト -->
+                            <div id="sneakers-area" class="third-heading-box">
+                                <h2 class="third-heading">Sneaker shop</h2>
+                            </div>
+                            <div class="works-page-container__product-descs-box">
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">概要</p>
+                                    <p class="works-page-container__detail">スニーカーショップ<span class="en">Web</span>サイト</p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">制作目的</p>
+                                    <p class="works-page-container__detail"><span class="en">grid</span>レイアウトやスタイリッシュアニメーションを使用してスタイリッシュな<span class="en">Web</span>サイト構築を目的に作成しました</p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">担当範囲</p>
+                                    <p class="works-page-container__detail">コーディング</p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">制作期間</p>
+                                    <p class="works-page-container__detail"><spna class="en">12</spna>時間</p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">使用ツール</p>
+                                    <p class="works-page-container__detail"><span class="en">HTML / CSS / JavaScript</span></p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item"><span class="en">URL</span></p>
+                                    <p class="works-page-container__detail"><span class="en"><a href="https://mtagn.github.io/past_work_sneaker-shop/" target="_blank">https://mtagn.github.io/past_work_sneaker-shop/</a></span></p>
+                                </div>
+                            </div>  
+
+                            <div class="works-page-container__product-box works-page-container__product-img-box">
+                                <h2 class="works-page-container__subheading">
+                                    <span class="hyphen">&#045;</span>
+                                    トップページ
+                                    <span class="hyphen">&#045;</span>
+                                </h2>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sneakers-full.png" alt="スニーカーショップのWebサイト" class="works-container__product-img">
+                            </div>
+
+                            <!-- 英会話スクール紹介Webサイト -->
+                            <div id="english-school-area" class="third-heading-box">
+                                <h2 class="third-heading">English School</h2>
+                            </div>
+                            <div class="works-page-container__product-descs-box">
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">概要</p>
+                                    <p class="works-page-container__detail">英会話スクール紹介<span class="en">LP</span></p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">制作目的</p>
+                                    <p class="works-page-container__detail">ふわっとしたアニメーションを使用して親しみやすい<span class="en">Web</span>サイト構築を目的として作成しました</p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">担当範囲</p>
+                                    <p class="works-page-container__detail">コーディング</p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">制作期間</p>
+                                    <p class="works-page-container__detail"><span class="en">14</span>時間</p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">使用ツール</p>
+                                    <p class="works-page-container__detail"><span class="en">HTML / CSS / JavaScript</span></p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item"><span class="en">URL</span></p>
+                                    <p class="works-page-container__detail"><a href="https://mtagn.github.io/past_work_english-school/" target="_blank"><span class="en">https://mtagn.github.io/past_work_english-school/</span></a></p>
+                                </div>
+                            </div>  
+
+                            <div class="works-page-container__product-box works-page-container__product-img-box">
+                                <h2 class="works-page-container__subheading">
+                                    <span class="hyphen">&#045;</span>
+                                    トップページ
+                                    <span class="hyphen">&#045;</span>
+                                </h2>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/english-school-full.png" alt="英会話スクール紹介ランディングページ-トップページ" class="works-container__product-img">
+                            </div>
+
+                            <!-- 家具ECサイト -->
+                            <div id="funiture-site-area" class="third-heading-box">
+                                <h2 class="third-heading">Funiture Shop</h2>
+                            </div>
+                            <div class="works-page-container__product-descs-box">
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">概要</p>
+                                    <p class="works-page-container__detail">家具<span class="en">EC</span>サイト</p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">制作目的</p>
+                                    <p class="works-page-container__detail"><span class="en">JavaScript</span>を利用して最低限のマークアップで構築することを目的に作成しました
+                                    </p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">担当範囲</p>
+                                    <p class="works-page-container__detail">コーディング</p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">制作期間</p>
+                                    <p class="works-page-container__detail"><span class="en">15</span>時間</p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">使用ツール</p>
+                                    <p class="works-page-container__detail"><span class="en">HTML / CSS / JavaScript</span></p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item"><span class="en">URL</span></p>
+                                    <p class="works-page-container__detail"><a href="https://mtagn.github.io/past_work_funiture-shop/" target="_blank"><span class="en">https://mtagn.github.io/past_work_funiture-shop/</span></a></p>
+                                </div>
+                            </div>  
+
+                            <div class="works-page-container__product-box works-page-container__product-img-box">
+                                <h2 class="works-page-container__subheading">
+                                    <span class="hyphen">&#045;</span>
+                                    トップページ / Aboutページ / Companyページ
+                                    <span class="hyphen">&#045;</span>
+                                </h2>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/funiture-design-full.png" alt="家具ショップWebサイト" class="works-container__product-img works-container__main-product-img" id="works-container__move-place">
+                                <ul class="works-page-container__product-thumbnails">
+                                    <li class="works-page-container__product-thumbnail list-top selected">
+                                        <a href="#works-container__move-place"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/funiture-design-full.png" alt="家具ショップWebサイト" class="top-img thumbnail"></a>
+                                    </li>
+                                    <li class="works-page-container__product-thumbnail list-producs">
+                                        <a href="#works-container__move-place"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/funiture-design-products.png" alt="家具ショップWebサイト" class="products-img thumbnail"></a>
+                                    </li>
+                                    <li class="works-page-container__product-thumbnail list-about">
+                                        <a href="#works-container__move-place"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/funiture-design-about.png" alt="家具ショップWebサイト" class="about-img thumbnail"></a>
+                                    </li>
+                                    <li class="works-page-container__product-thumbnail list-company">
+                                        <a href="#works-container__move-place"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/funiture-design-company.png" alt="家具ショップWebサイト" class="company-img thumbnail"></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- 英会話スクールLP -->
+                            <div id="english-LP-area" class="third-heading-box">
+                                <h2 class="third-heading">English School Design</h2>
+                            </div>
+                            <div class="works-page-container__product-descs-box">
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">概要</p>
+                                    <p class="works-page-container__detail">英会話スクール<span class="en">LP</span></p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">制作目的</p>
+                                    <p class="works-page-container__detail">細かなデザインができる<span class="en">Photoshop</span>を使用して親しみやすさのあるランディングページを作成しました
+                                    </p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">担当範囲</p>
+                                    <p class="works-page-container__detail">デザイン</p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">制作期間</p>
+                                    <p class="works-page-container__detail"><span class="en">10</span>時間</p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">使用ツール</p>
+                                    <p class="works-page-container__detail"><span class="en">Photoshop</span></p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item"><span class="en">URL</span></p>
+                                    <p class="works-page-container__detail"><span class="en"></span></p>
+                                </div>
+                            </div>  
+
+                            <div class="works-page-container__product-box works-page-container__product-img-box">
+                                <h2 class="works-page-container__subheading">
+                                    <span class="hyphen">&#045;</span>
+                                    トップページ
+                                    <span class="hyphen">&#045;</span>
+                                </h2>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/english-school-LP-full.png" alt="英会話スクール紹介ランディングページ" class="works-container__product-img">
+                            </div>
+
+                            <!-- スポーツジムLP -->
+                            <div id="gym-LP-area" class="third-heading-box">
+                                <h2 class="third-heading">Sport Gym Design</h2>
+                            </div>
+                            <div class="works-page-container__product-descs-box">
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">概要</p>
+                                    <p class="works-page-container__detail">スポーツジム<span class="en">LP</span></p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">制作目的</p>
+                                    <p class="works-page-container__detail">細かなデザインができる<span class="en">Photoshop</span>を使用してスタイリッシュで高級感のあるランディングページを作成しました
+                                    </p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">担当範囲</p>
+                                    <p class="works-page-container__detail">デザイン</p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">制作期間</p>
+                                    <p class="works-page-container__detail"><span class="en">12</span>時間</p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">使用ツール</p>
+                                    <p class="works-page-container__detail"><span class="en">Photoshop</span></p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item"><span class="en">URL</span></p>
+                                    <p class="works-page-container__detail"><span class="en"></span></p>
+                                </div>
+                            </div>  
+
+                            <div class="works-page-container__product-box works-page-container__product-img-box">
+                                <h2 class="works-page-container__subheading">
+                                    <span class="hyphen">&#045;</span>
+                                    トップページ
+                                    <span class="hyphen">&#045;</span>
+                                </h2>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gym-LP-full.png" alt="スポーツジム紹介ランディングページ" class="works-container__product-img">
+                            </div>
+
+                            <!-- Todoアプリ -->
+                            <div id="todo-app-area" class="third-heading-box">
+                                <h2 class="third-heading">Todo App</h2>
+                            </div>
+                            <div id="" class="works-page-container__product-descs-box">
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">概要</p>
+                                    <p class="works-page-container__detail">※準備中　<span class="en">Todo</span>アプリ</p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">制作目的</p>
+                                    <p class="works-page-container__detail"><span class="en">React.js</span>学習のため
+                                    </p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">担当範囲</p>
+                                    <p class="works-page-container__detail">コーディング</p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">制作期間</p>
+                                    <p class="works-page-container__detail"><span class="en">1</span>か月</p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item">使用ツール</p>
+                                    <p class="works-page-container__detail"><span class="en">HTML / CSS / React.js</span></p>
+                                </div>
+                                <div class="works-page-container__product-desc-box">
+                                    <p class="works-page-container__item"><span class="en">URL</span></p>
+                                    <p class="works-page-container__detail"><span class="en"></span></p>
+                                </div>
+                            </div>  
+
+                            <div class="works-page-container__product-box works-page-container__product-img-box">
+                                <h2 class="works-page-container__subheading">
+                                    <span class="hyphen">&#045;</span>
+                                    トップページ
+                                    <span class="hyphen">&#045;</span>
+                                </h2>
+                                <p>申し訳ございません。準備中です。</p>
+                                <!-- <img src="<?php echo get_template_directory_uri(); ?>/" alt="" class="works-container__product-img"> -->
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="works-container section-container">
-            <div class="section-container__subheading-box">
-                <div class="subheading-decoration"></div>
-                <div class="section-container__subheading-text-box">
-                    <h2 class="subheading">Works</h2>
-                    <div class="subheading-ja">制作実績</div>
-                </div>
-            </div>
-            <div class="section-container__subheading-box-sp">
-                <div class="subheading-decoration"></div>
-                <div class="section-container__subheading-text-box">
-                    <h2 class="subheading">Works</h2>
-                    <div class="hyphen-left">&#045;</div>
-                    <div class="subheading-ja">制作実績</div>
-                    <div class="hyphen-right">&#045;</div>
-                </div>
-            </div>
+              </div>
+          </main>
 
-            <ul class="works-container__works-boxes">
-                <li class="works-container__work-box">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sneaker-shop.jpg" alt="スニーカーショップのWebサイト" class="works-container__product-img" width="475" height="400">
-                    <a href="<?php echo get_template_directory_uri(); ?>/works/" class="works-container__product-desc-box">
-                        <p class="works-container__product-desc">スニーカーショップ</p>
-                    </a>
-                </li>
-                <li class="works-container__work-box">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/english-school.jpg" alt="英会話スクール紹介ランディングページ" class="works-container__product-img" width="475" height="400">
-                    <a href="<?php echo get_template_directory_uri(); ?>/works/" class="works-container__product-desc-box">
-                        <p class="works-container__product-desc"><span class="en">Web</span>サイト英会話スクール紹介ランディングページ</p>
-                    </a>    
-                </li>
-                <li class="works-container__work-box">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/funiture-shop.jpg" alt="家具ショップWebサイト" class="works-container__product-img" width="475" height="400">
-                    <a href="<?php echo get_template_directory_uri(); ?>/works/" class="works-container__product-desc-box">
-                        <p class="works-container__product-desc">家具ショップ<span class="en">Web</span>サイト</p>
-                    </a>    
-                </li>
-                <li class="works-container__work-box">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/english-school-LP-main.png" alt="英会話スクール紹介ランディングページ" class="works-container__product-img" width="475" height="400">
-                    <a href="<?php echo get_template_directory_uri(); ?>/works/" class="works-container__product-desc-box">
-                        <p class="works-container__product-desc">オンライン英会話スクールランディングページ</p>
-                    </a>    
-                </li>
-            </ul>
-
-            <div class="works-container__more-area">
-                <div class="works-container__more-box">
-                    <p class="works-container__more-text">
-                        <a href="<?php echo get_template_directory_uri(); ?>/works/" class="arrow-anker"><span class="en">View More</span></a>
-                    </p>
-                    <div class="works-container__arrow"><span class="arrow"></span></div>
-                    </div>
-                </div>   
-            </div>
-        </div>
-
-        <div class="contact-container section-container">
-            <div class="section-container__subheading-box">
-                <div class="subheading-decoration"></div>
-                <div class="section-container__subheading-text-box">
-                    <h2 class="subheading">Contact</h2>
-                    <div class="subheading-ja">お問い合わせ</div>
-                </div>
-            </div>
-            <div class="section-container__subheading-box-sp">
-                <div class="subheading-decoration"></div>
-                <div class="section-container__subheading-text-box">
-                    <h2 class="subheading">Contact</h2>
-                    <div class="hyphen-left">&#045;</div>
-                    <div class="subheading-ja">お問い合わせ</div>
-                    <div class="hyphen-right">&#045;</div>
-                </div>
-            </div>
-            <p class="contact-container__explanation">お気軽にお問い合わせください！</p>
-            <a href="contact/" class="contact-container__btn-box">
-                <p class="contact-container__btn-text">お問い合わせページへ</p>
-            </a>
-        </div>
-    </div>
-</main>
+        <?php endwhile; ?>
+    <?php endif; ?>
 
 <?php get_footer(); ?>

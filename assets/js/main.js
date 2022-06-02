@@ -57,4 +57,27 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   } );
 
+  /*********************
+    worksページMenu開閉
+  *********************/
+  // メニュー開閉
+  let toggleMenuElem = document.querySelector(".works-page-container__menus-checkbox").checked;
+  const toggleLabelElem = document.querySelector(".works-page-container__menus-label");
+  const menuElem = document.querySelector(".works-page-container__product-menus");
+  toggleLabelElem.addEventListener("click", () => {
+    menuElem.classList.toggle("works-page-container__product-menus-non-checked");
+  });
+
+  // SPの時はメニュークリック時にメニュー閉じる(SPのときにdisplay:noneを効かせている)
+  const menuElems = document.querySelectorAll(".works-page-container__product-menus");
+  menuElems.forEach( (menu) => {
+    menu.addEventListener("click", () => {
+      menuElem.classList.toggle("works-page-container__product-menus-non-checked");
+      // SPの時はメニュークリック時にチェックボックスOFFにする
+      if (toggleMenuElem) {
+        document.querySelector(".works-page-container__menus-checkbox").checked = false;
+      }
+    });
+  });  
+
 });

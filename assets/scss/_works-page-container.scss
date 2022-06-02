@@ -8,7 +8,7 @@
     @media screen and (max-width: 767px) {
         max-width: var.$content-width-sp;
         margin: 0 auto var.$sec-under-margin-sp;
-        padding-top: var.$header-height;
+        padding-top: var.$header-height-sp;
     }
     @media screen and (min-width: 767px) and (max-width: 1000px) {
         max-width: 747px;
@@ -17,54 +17,129 @@
     .works-page-container__menu-products-box {
         display: flex;
         margin: 0 auto;
+        position: relative;
         @media screen and (max-width: 767px) {
             flex-direction: column;
         }
         
-        .works-page-container__product-menus {
+        .works-page-container__menus-and-toggle-btn {
             position: fixed;
-            margin: 0 auto;
-            padding: 0 32px 0 0;
-            width: 30%;
-            @media screen and (max-width: 767px) {
-                width: 100%;
-                position: static;
-                padding: 0;
-                margin-bottom: 48px;
-            }
-    
-            .menu {
-                text-align: left;
-                cursor: pointer;
-                padding: 12px 16px;
-                position: relative;
-                transition: .5s;
-    
-                .menu-anker {
-                    color: var.$text-color;
-                    display: inline-block;
-                    width: 100%;
+            background-color: rgba($color: #ffffff, $alpha: .9);
+            width: 100%;
+            max-width: 300px;
+            // margin: 0 auto;
+            
+            .works-page-container__menus-toggle-btn {
+                display: none;
 
-                    .en {
-                        padding: 0 0 0 8px;
+                @media screen and (max-width: 767px) {
+                    display: block;
+                    margin: 0 auto 8px;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    .works-page-container__menus-checkbox {
+                        display: none;
+                    }
+                    .works-page-container__menus-label {
+                        display: inline-block;
+                        width: 100px;
+                        height: 40px;
+                        background-color: #cccccc;
+                        border-radius: 20px;
+                        position: relative;
+                    }
+                    .works-page-container__menus-label::before {
+                        content: "Menu";
+                        font-weight: bold;
+                        position: absolute;
+                        top: 50%;
+                        right: 10%;
+                        transform: translateY(-50%);
+                        transition: .5s;
+                    }
+                    .works-page-container__menus-label::after {
+                        content: "";
+                        display: inline-block;
+                        width: 40px;
+                        height: 40px;
+                        background-color: #ffffff;
+                        border-radius: 50%;
+                        box-shadow: 0 0 3px #000000;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        transition: .5s;
+                    }
+                    .works-page-container__menus-checkbox:checked + .works-page-container__menus-label{
+                        background-color: var.$accent-color;
+                    }
+                    .works-page-container__menus-checkbox:checked + .works-page-container__menus-label::after {
+                        left: 60px;
+                    }
+                    .works-page-container__menus-checkbox:checked + .works-page-container__menus-label::before {
+                        left: 10%;
+                        color: #ffffff;
                     }
                 }
-                .menu-anker::before {
-                    content: "";
-                    display: inline-block;
-                    background-color: var.$text-color;
-                    vertical-align: middle;
-                    width: 8px;
-                    height: 1px;
+            }
+        
+            .works-page-container__product-menus {
+                display: block;
+                position: fixed;
+                margin: 0 auto;
+                padding: 0 32px 0 0;
+                width: 30%;
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    position: static;
+                    padding: 48px 0 0;
+                }
+        
+                .works-page-container__menu {
+                    text-align: left;
+                    cursor: pointer;
+                    padding: 12px 16px;
+                    position: relative;
+                    transition: .5s;
+        
+                    .works-page-container__menu-anker {
+                        color: var.$text-color;
+                        display: inline-block;
+                        width: 100%;
+
+                        .en {
+                            padding: 0 0 0 8px;
+                        }
+                    }
+                    .works-page-container__menu-anker::before {
+                        content: "";
+                        display: inline-block;
+                        background-color: var.$text-color;
+                        vertical-align: middle;
+                        width: 8px;
+                        height: 1px;
+                    }
+                }
+                .works-page-container__menu:hover {
+                    opacity: .5;
                 }
             }
-            .menu:hover {
-                opacity: .5;
+            .works-page-container__product-menus-hide {
+                display: none;
+            }
+            @media screen and (max-width: 767px) {
+                .works-page-container__product-menus-non-checked {
+                    display: none;
+                }
             }
         }
 
         .works-page-container__products-box {
             margin: 0 0 0 auto;
+            padding: 80px 0 0 0;
             width: 70%;
             @media screen and (min-width: 767px) and (max-width: 1000px) {
                 max-width: 747px;
@@ -105,6 +180,7 @@
                         margin-top: -8px;
                         @media screen and (max-width: 767px) {
                             width: 70%;
+                            overflow: hidden;
                         }
                     }
                 }
